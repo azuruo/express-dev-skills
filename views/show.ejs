@@ -1,0 +1,7 @@
+<h1><%= skill.name %></h1>
+<p>Expertise : <%= skill.expertise %></p>
+<a href="/skills">Back to list</a>
+
+<form action="/skills/<%= skill.id %>?_method=DELETE" method="post">
+    <button type="submit">Delete Skill</button>
+</form>

@@ -10,4 +10,13 @@ const skills = [
 module.exports = {
     findAll: () => skills,
     findById: (id) => skills.find(skill => skill.id === id),
+    add: (skill) => {
+        skills.push(skill);
+    },
+    removeById: (id) => {
+        const idx = skills.findIndex(skill => skill.id === id);
+        if (idx !== -1) {
+            skills.splice(idx, 1);
+        }
+    }
 };
